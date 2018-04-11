@@ -1,0 +1,23 @@
+{
+    "frame": 0,
+    "notification": {
+        "kind": "N",
+        "value": {
+            "isSuccessful": false
+        },
+        "hasValue": true
+    }
+}
+
+  to deep equal
+
+ {
+  "frame": 0,
+    "notification": {
+        "kind": "N",
+        "value": {
+            "isSuccessful": true
+        },
+        "hasValue": true
+    }
+}

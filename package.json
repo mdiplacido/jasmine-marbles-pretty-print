@@ -1,0 +1,16 @@
+{
+  "name": "jasmine-marbles-pretty-print",
+  "version": "1.0.0",
+  "description": "Simple tool to diff nasty jasmine-marbles observable output",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mdiplacido",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "diff": "^3.5.0",
+    "yargs": "^11.0.0"
+  }
+}
