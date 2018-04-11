@@ -32,7 +32,7 @@ var i = content.indexOf(split);
 var first = format(clean(content.substring(0, i)));
 var second = format(clean(content.substring(i + split.length)));
 
-var diff = jsdiff.diffChars(first, second);
+var diff = jsdiff.diffLines(first, second);
 
 diff.forEach(function (part) {
     // green for additions, red for deletions
