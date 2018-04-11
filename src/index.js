@@ -2,6 +2,7 @@ require('colors');
 var args = require('yargs');
 var jsdiff = require('diff');
 var fs = require('fs');
+var stringify = require('json-stable-stringify');
 
 var file = args.argv.file;
 var split = args.argv.split || "to deep equal";
@@ -23,7 +24,9 @@ function format(input) {
     if (!shouldFormat) {
         return input;
     }
-    return JSON.stringify(JSON.parse(input), null, 4);
+
+    var obj = JSON.parse(input);
+    return stringify(obj, { space: 4 });
 }
 
 var content = fs.readFileSync(file, 'utf8');
