@@ -8,6 +8,10 @@ var strategies = [
     {
         splitOn: "to deep equal",
         formatWith: "parse"
+    },
+    {
+        splitOn: "but actual calls were",
+        formatWith: "eval"
     }
 ];
 
