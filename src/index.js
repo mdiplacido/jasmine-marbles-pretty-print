@@ -40,7 +40,8 @@ function clean(input) {
     return input
         .replace(/\"\:\"\[/g, "\":[")
         .replace(/\]\"/g, "]")
-        .replace(/Object\(\{/g, "{")
+        // next match eg.  'Object({' or 'Foo({'
+        .replace(/\w+\(\{/g, "{")
         .replace(/\}\)/g, "}");
 }
 
