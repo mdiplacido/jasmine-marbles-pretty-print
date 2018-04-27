@@ -38,6 +38,7 @@ function clean(input) {
         return input;
     }
     return input
+        .replace(/\r?\n|\r/g, "")
         .replace(/\"\:\"\[/g, "\":[")
         .replace(/\]\"/g, "]")
         // next match eg.  'Object({' or 'Foo({'
