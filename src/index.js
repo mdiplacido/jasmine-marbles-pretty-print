@@ -10,6 +10,11 @@ var strategies = [
         formatWith: "parse"
     },
     {
+        // note: for this strategy you should set clean=false as your input
+        splitOn: "to equal",
+        formatWith: "eval"
+    },
+    {
         splitOn: "but actual calls were",
         formatWith: "eval"
     }
@@ -19,9 +24,9 @@ var file = args.argv.file;
 var split = args.argv.split || "auto";
 var strategy = args.argv.strategy || "auto";
 
-var shouldClean = args.argv.clean || true;
-var shouldFormat = args.argv.format || true;
-var logging = args.argv.logging || false;
+var shouldClean = (args.argv.clean || "true") === "true";
+var shouldFormat = (args.argv.format || "true") === "true";
+var logging = (args.argv.logging || "false") === "true";
 
 if (!file || !fs.existsSync(file)) {
     throw new Error("cannot find --file " + file);
